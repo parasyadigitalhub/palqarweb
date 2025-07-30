@@ -14,7 +14,7 @@ export class AnimationComponent implements OnInit {
     "Web Development",
     "User Experience",
     "Creative Design",
-    "PARASYA"
+    "PALQAR"
   ];
 
   currentText: string = '';

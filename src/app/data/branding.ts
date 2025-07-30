@@ -7,7 +7,7 @@ export const companies = [
         brandingUrl: '/branding/company-one',
         websiteUrl: '/portfolio',
         brandingOverview: 'GreyChem is a leading chemical solutions provider specializing in high-quality industrial chemicals, delivering innovative products and services to a wide range of industries. The company is committed to excellence, offering tailored solutions for clients’ unique chemical needs.',
-        problemStatement: 'GreyChem lacked a clear brand identity and needed to establish itself as a credible and professional player in the chemical industry. Parasya developed a distinct logo, cohesive branding, and marketing materials, positioning the company as a trusted and authoritative chemical solutions provider.',
+        problemStatement: 'GreyChem lacked a clear brand identity and needed to establish itself as a credible and professional player in the chemical industry. Palqar developed a distinct logo, cohesive branding, and marketing materials, positioning the company as a trusted and authoritative chemical solutions provider.',
         location: 'India',
         logicPoints: [
             {
@@ -121,7 +121,7 @@ export const companies = [
         brandingUrl: '/branding/company-one',
         websiteUrl: '/portfolio',
         brandingOverview: 'UrbanStar Interiors & Fit Out L.L.C. specializes in high-end interior design and fit-out solutions, transforming spaces with innovative designs and quality craftsmanship. Committed to excellence, the company delivers customized, functional, and aesthetically appealing interiors for residential and commercial projects.',
-        problemStatement: 'Lacking a distinct brand identity, UrbanStar needed a professional image to stand out in the competitive interior design industry. Parasya developed a bold logo, cohesive branding, marketing materials, and a strategic online presence, enhancing its credibility and market positioning.',
+        problemStatement: 'Lacking a distinct brand identity, UrbanStar needed a professional image to stand out in the competitive interior design industry. Palqar developed a bold logo, cohesive branding, marketing materials, and a strategic online presence, enhancing its credibility and market positioning.',
         location: 'United States',
         logicPoints: [
             {
@@ -178,7 +178,7 @@ export const companies = [
         brandingUrl: '/branding/company-one',
         websiteUrl: 'https://futurestarssports.academy',
         brandingOverview: 'Future Stars Sports Academy develops young football talent through professional coaching, structured training, and career opportunities. With the tagline “Together We Rise,” it fosters teamwork, resilience, and excellence, preparing athletes for higher-level competition and success.',
-        problemStatement: 'Lacking a strong brand identity, the academy struggled to establish credibility and attract aspiring players. Parasya created a bold logo, tagline, marketing materials, and a strategic social media presence, positioning it as a professional and recognized football institution.',
+        problemStatement: 'Lacking a strong brand identity, the academy struggled to establish credibility and attract aspiring players. Palqar created a bold logo, tagline, marketing materials, and a strategic social media presence, positioning it as a professional and recognized football institution.',
         location: 'UAE INDIA',
         logicPoints: [
             {
@@ -235,7 +235,7 @@ export const companies = [
         brandingUrl: '/branding/company-one',
         websiteUrl: '/portfolio',
         brandingOverview: 'Nextpath Educare is a trusted education consultancy dedicated to guiding students toward academic and career success. It provides expert counseling, university admissions support, and personalized guidance, helping students navigate their educational journey with confidence and clarity.',
-        problemStatement: 'Lacking a strong brand identity, Nextpath needed a professional presence to establish credibility and attract students. Parasya developed a distinctive logo, cohesive branding, marketing materials, and a strategic digital presence, positioning it as a reliable and recognized education consultancy.',
+        problemStatement: 'Lacking a strong brand identity, Nextpath needed a professional presence to establish credibility and attract students. Palqar developed a distinctive logo, cohesive branding, marketing materials, and a strategic digital presence, positioning it as a reliable and recognized education consultancy.',
         location: ' INDIA',
         logicPoints: [
             {
@@ -283,7 +283,7 @@ export const companies = [
         brandingUrl: '/branding/company-one',
         websiteUrl: 'https://nextgen.in',
         brandingOverview: 'NextGenStudies is an innovative education platform that helps students achieve academic success by providing personalized study resources, guidance, and support. With a focus on enhancing learning outcomes, it empowers students to reach their full academic potential.',
-        problemStatement: 'NextGenStudies lacked a cohesive brand identity and struggled to stand out in the competitive educational sector. Parasya created a unique logo, developed a strong brand presence, and designed marketing materials, positioning the platform as a trusted and professional resource for students.',
+        problemStatement: 'NextGenStudies lacked a cohesive brand identity and struggled to stand out in the competitive educational sector. Palqar created a unique logo, developed a strong brand presence, and designed marketing materials, positioning the platform as a trusted and professional resource for students.',
         location: ' INDIA',
         logicPoints: [
             {

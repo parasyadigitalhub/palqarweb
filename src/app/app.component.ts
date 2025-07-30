@@ -13,7 +13,7 @@ import { BreadcrumbComponent } from "./common/breadcrumb/breadcrumb.component";
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'Parasya';
+  title = 'Palqar';
 
   animationDone = false;
 

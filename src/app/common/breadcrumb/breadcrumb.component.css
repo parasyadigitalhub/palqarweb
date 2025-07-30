@@ -9,6 +9,7 @@
     height: 70px;
     margin-left: 10px;
     margin-bottom: 0.3rem;
+    filter: brightness(0) invert(1);
 }
 
 .breadcrumb-nav {
