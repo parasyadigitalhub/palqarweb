@@ -1,0 +1,239 @@
+<div class="container-fluid">
+
+    <div class="img">
+        <img src="/parasya/team.webp" alt="">
+    </div>
+
+    <div class="headings">
+        <h1>Welcome to <span class="text-danger">Parasya</span></h1>
+        <p>where we are dedicated to "Elevating Your Identity." Our tagline reflects our mission to enhance and amplify
+            your brand's presence in the digital world. By employing innovative strategies and leveraging the latest
+            technologies, we aim to refine your online identity and elevate your business to new heights.<br /><br />
+            At Parasya, we specialize in delivering cutting-edge digital marketing solutions tailored to meet the unique
+            needs of each client. Our team of experts harnesses the power of innovative strategies and advanced
+            technology to drive growth, enhance brand visibility, and maximize online presence. Whether you're looking
+            to boost your social media engagement, optimize your search engine rankings, or create compelling content,
+            Parasya is committed to helping your business succeed in the digital landscape. With a focus on results and
+            customer satisfaction, we are your trusted partner in navigating the dynamic world of digital marketing.</p>
+    </div>
+
+    <div class="mission scroll-animate" #missionSection appLazyLoad>
+        <div class="text">
+            <div class="heading">
+                <h3>Our <span class="text-danger">Mission</span> & <span class="text-danger">Vision</span></h3>
+            </div>
+            <div class="content">
+                <p>Empowering businesses through innovation and excellence</p>
+            </div>
+        </div>
+        <div class="cards">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title"><i class="bi bi-bookmark"></i></h5>
+                    <h6 class="card-subtitle mb-2">Our Mission</h6>
+                    <p class="card-text">To deliver innovative business solutions that empower organizations to achieve
+                        their full potential through digital transformation, strategic consulting, and comprehensive
+                        support services</p>
+                    <p><i class="bi bi-check2"></i>Drive business transformation</p>
+                    <p><i class="bi bi-check2"></i>Foster innovation and growth</p>
+                    <p><i class="bi bi-check2"></i>Provide exceptional client service</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title"><i class="bi bi-eye"></i></h5>
+                    <h6 class="card-subtitle mb-2">Our vision</h6>
+                    <p class="card-text">To be the leading force in business transformation, recognized globally for our
+                        innovative solutions, excellence in service delivery, and commitment to client success.</p>
+                    <p><i class="bi bi-check2"></i>Global industry leadership</p>
+                    <p><i class="bi bi-check2"></i>Sustainable business practices</p>
+                    <p><i class="bi bi-check2"></i>Continuous innovation</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="cards scroll-animate" #processSection appLazyLoad>
+        <div class="card_heading">
+            <h1>Our Process</h1>
+        </div>
+        <div class="row card-group">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">01</h5>
+                    <h5 class="card-title">Discovery and Consultation</h5>
+                    <p class="card-text">Parasya engage deeply with clients to understand their specific needs and
+                        objectives, ensuring a clear vision from the outset.
+                    </p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">02</h5>
+                    <h5 class="card-title">Planning and Proposal</h5>
+                    <p class="card-text">We craft a detailed project plan and proposal, outlining the scope, timeline,
+                        and budget for client approval.
+                    </p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">03</h5>
+                    <h5 class="card-title">Design and Development</h5>
+                    <p class="card-text">We design and develop tailored solutions, aligning with the client's goals and
+                        technical requirements.
+                    </p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">04</h5>
+                    <h5 class="card-title">Testing and Quality Assurance</h5>
+                    <p class="card-text">We rigorously test all aspects of the solution, ensuring it meets our high
+                        standards for performance, security, and reliability.
+                    </p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">05</h5>
+                    <h5 class="card-title">Deployment and Support</h5>
+                    <p class="card-text">Finally, we deploy the solution and provide ongoing support to ensure seamless
+                        operation and continuous improvement.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="journey scroll-animate" #journeySection appLazyLoad>
+        <h1>Parasya Journey</h1>
+        <div class="timeline">
+            <div class="timeline-years">
+                <p>2023</p>
+                <p>2024</p>
+            </div>
+            <div class="timeline-line">
+                <button class="year-btn" [class.active]="selectedYear === '2023'" (click)="selectYear('2023')"></button>
+                <div class="line-bar"></div>
+                <button class="year-btn" [class.active]="selectedYear === '2024'" (click)="selectYear('2024')"></button>
+            </div>
+            <div class="timeline-images">
+                <div class="image-container" [class.active]="selectedYear === '2023'">
+                    <div class="info-board" [class.expanded]="showFull2023">
+                        <button class="toggle-btn" (click)="showFull2023 = !showFull2023">
+                            <i class="bi bi-arrows-angle-expand"></i>
+                        </button>
+                        <h3>A Humble Beginning</h3>
+                        <p *ngIf="showFull2023">
+                            In 2023, Parasya started with some passionate
+                            individuals. Despite their limited resources, their shared vision and strong determination
+                            helped them establish what would become a significant force in the industry. Their
+                            commitment to innovation pushed boundaries and set the stage for a remarkable future. </p>
+                    </div>
+                </div>
+                <div class="image-container" [class.active]="selectedYear === '2024'">
+                    <div class="info-board" [class.expanded]="showFull2024">
+                        <button class="toggle-btn" (click)="showFull2024 = !showFull2024">
+                            <i class="bi bi-arrows-angle-expand"></i>
+                        </button>
+                        <h3>A Year of Transformation and Global Reach</h3>
+                        <p *ngIf="showFull2024">
+                            In 2024, Parasya truly showed its dedication to excellence. They successfully finished
+                            over 50 projects both in India and internationally. This big achievement highlights their
+                            ability to deliver outstanding results on a large scale. It also reflects the strong trust
+                            and confidence that clients from various industries. The team's
+                            steady focus on quality and innovation continued to make them stand out in a competitive
+                            market.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="values scroll-animate" #valuesSection appLazyLoad>
+        <div class="headings">
+            <h1>Oru Core <span class="text-danger">Values</span></h1>
+        </div>
+        <div class="values-cards">
+            <div class="value-card">
+                <h4><i class="bi bi-shield-check"></i></h4>
+                <h4 class="name">Tailored Digital Strategies</h4>
+                <p>Our approach ensures that every campaign is strategically aligned with your brand's unique identity
+                    and objectives.</p>
+            </div>
+            <div class="value-card">
+                <h4><i class="bi bi-lightning-charge"></i></h4>
+                <h4 class="name">Innovative Solutions</h4>
+                <p>From advanced SEO practices to cutting-edge social media strategies, our solutions are designed to
+                    enhance your online presence.</p>
+            </div>
+            <div class="value-card">
+                <h4><i class="bi bi-people"></i></h4>
+                <h4 class="name">Client-Centric Focus</h4>
+                <p>Our commitment to client satisfaction is at the core of everything we do.</p>
+            </div>
+            <div class="value-card">
+                <h4><i class="bi bi-building"></i></h4>
+                <h4 class="name">Excellence</h4>
+                <p>Striving for perfection in everything we do.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="team scroll-animate" #teamSection appLazyLoad>
+        <div class="headings">
+            <h1>Meet the <span class="text-danger">team</span></h1>
+            <p>Discover the driving force behind Parasya. Our core team, including visionary founders, is committed to
+                empowering you with expertise in Marketing and Technology world.</p>
+        </div>
+        @if(!isMobile){
+        <div class="team-images">
+            <div class="team-card" *ngFor="let card of teamMembers">
+                <img [src]="card.image" loading="lazy" [alt]="card.name" />
+                <div class="overlay">
+                    <div class="info">
+                        <h5>{{ card.name }}</h5>
+                        <p>{{ card.role }}</p>
+                        <a [href]="card.linkedin" target="_blank" aria-label="LinkedIn Profile">
+                            <i class="bi bi-linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        } @else{
+        <div id="carouselExampleCaptions" class="carousel slide d-block d-md-none mb-4" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button *ngFor="let card of teamMembers; let i = index" type="button"
+                    data-bs-target="#carouselExampleCaptions" [attr.data-bs-slide-to]="i" [class.active]="i === 0"
+                    [attr.aria-current]="i === 0 ? 'true' : null" [attr.aria-label]="'Slide ' + (i + 1)">
+                </button>
+            </div>
+
+            <div class="carousel-inner">
+                <div class="carousel-item" *ngFor="let card of teamMembers; let i = index" [class.active]="i === 0">
+                    <img [src]="card.image" class="d-block w-100" [alt]="card.name">
+                    <div class="carousel-caption">
+                        <h5>{{ card.name }}</h5>
+                        <p>{{ card.role }}</p>
+                    </div>
+                </div>
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        }
+
+    </div>
+</div>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+  <url>
+    <loc>https://parasya.in/home</loc>
+      <video:video>
+        <video:thumbnail_loc>https://parasya.in/logo-white.webp</video:thumbnail_loc>
+        <video:title>Parasya Motion - Elevating Your Identity</video:title>
+        <video:description>Discover Parasya's vision and expertise in incorporation, legal support, digital marketing, and cutting-edge app and web development services. This video showcases our brand and mission.</video:description>
+        <video:content_loc>https://parasya.in/parasya-motion.mp4</video:content_loc>
+        <video:duration>51</video:duration> <video:publication_date>2025-05-01T08:00:00+05:30</video:publication_date> 
+      </video:video>
+  </url>
+  <url>
+    <loc>https://parasya.in/about</loc>
+  </url>
+  <url>
+    <loc>https://parasya.in/contacts</loc>
+  </url>
+  <url>
+    <loc>https://parasya.in/blog</loc>
+  </url>
+  <url>
+    <loc>https://parasya.in/services</loc>
+  </url>
+  <url>
+    <loc>https://parasya.in/portfolio</loc>
+  </url>
+</urlset>

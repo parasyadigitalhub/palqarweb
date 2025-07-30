@@ -1,0 +1,289 @@
+<div class="container-fluid">
+    <div class="hero-section" (mousemove)="handleMouseMove($event)">
+        <div class="gradient-overlay" [style.opacity]="isLoading ? 0 : 1"></div>
+
+        <div class="grid-background"></div>
+
+        <div class="planet-container">
+            <div class="planet" [style.transform]="
+        'translate(-50%, -50%) rotate(' + rotation + 'deg) translate(' +
+        mousePosition.x + 'px, ' + mousePosition.y + 'px) scale(' +
+        (isLoading ? 1.5 : 1) + ')'">
+                <div class="planet-glow"></div>
+                <div class="planet-inner">
+                    <img src="home/planet.svg" alt="Floating planet" [style.opacity]="isLoading ? 0 : 0.4" />
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-content" [style.opacity]="isLoading ? 0 : 1"
+            [style.transform]="isLoading ? 'translateY(20px)' : 'translateY(0)'">
+            <h1> ELEVATING </h1>
+            <h1> YOUR IDENTITY</h1>
+            @if(!isMobile){
+            <p>
+                Your One-Stop Solution for Incorporation, Legal Support, Digital
+                Marketing, and Cutting-Edge App & Web Development Services.
+            </p>
+            }
+        </div>
+    </div>
+
+    @if(!isMobile){
+    <div class="carousel">
+        <div class="carousel-3d-container position-relative" (mouseenter)="stopAutoplay()"
+            (mouseleave)="startAutoplay()">
+            <div class="carousel-3d" [style.transform]="getCarouselTransform()">
+                <div class="carousel-item-3d" *ngFor="let image of carouselImages; let i = index"
+                    [class.active]="i === currentIndex" [style.transform]="getItemTransform(i)">
+                    <img [src]="image" alt="3D Image" />
+                </div>
+            </div>
+
+            <button class="carousel-nav prev-btn" (click)="prev()">
+                <i class="bi bi-arrow-left"></i>
+            </button>
+
+            <button class="carousel-nav next-btn" (click)="next()">
+                <i class="bi bi-arrow-right"></i>
+            </button>
+        </div>
+    </div>
+    } @else {
+    <div class="carousel-mobile">
+        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item" *ngFor="let image of carouselImages; let i = index" [class.active]="i === 0">
+                    <img [src]="image" class="d-block w-100" alt="Carousel image {{ i + 1 }}" />
+                </div>
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+    }
+
+    <div class="about scroll-animate" #aboutSection appLazyLoad>
+        <div class="text">
+            <div class="heading">
+                <h3>About <span class="text-danger">Parasya</span></h3>
+            </div>
+            <div class="content">
+                <p>At PARASYA, we're not just building a business; we're crafting a vision, one innovation at a time.
+                    Founded in 2023, we embarked on this journey with a shared dream to unlock your brand's full online
+                    potential with our digital marketing expertise.</p>
+                <button class="magnetic-btn" (mousemove)="onButtonHover($event)" (mouseleave)="resetButtonHover()"
+                    (click)="goToAboutPage()">
+                    Learn More
+                </button>
+            </div>
+        </div>
+        <div class="video">
+            <video #parasyaVideo src="/home/video/parasya-motion.mp4" autoplay muted loop playsinline></video>
+
+            <button class="mute-btn" (click)="toggleMute()">
+                <i [ngClass]="isMuted ? 'bi bi-volume-mute-fill' : 'bi bi-volume-up-fill'"></i>
+            </button>
+        </div>
+
+    </div>
+
+    <div class="mission scroll-animate" #missionSection appLazyLoad>
+        <div class="text">
+            <div class="heading">
+                <h3>Our <span class="text-danger">Mission</span> & <span class="text-danger">Vision</span></h3>
+            </div>
+            <div class="content">
+                <p>Empowering businesses through innovation and excellence</p>
+            </div>
+        </div>
+        <div class="cards">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title"><i class="bi bi-bookmark"></i></h5>
+                    <h6 class="card-subtitle mb-2">Our Mission</h6>
+                    <p class="card-text">To deliver innovative business solutions that empower organizations to achieve
+                        their full potential through digital transformation, strategic consulting, and comprehensive
+                        support services</p>
+                    <p><i class="bi bi-check2"></i>Drive business transformation</p>
+                    <p><i class="bi bi-check2"></i>Foster innovation and growth</p>
+                    <p><i class="bi bi-check2"></i>Provide exceptional client service</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title"><i class="bi bi-eye"></i></h5>
+                    <h6 class="card-subtitle mb-2">Our vision</h6>
+                    <p class="card-text">To be the leading force in business transformation, recognized globally for our
+                        innovative solutions, excellence in service delivery, and commitment to client success.</p>
+                    <p><i class="bi bi-check2"></i>Global industry leadership</p>
+                    <p><i class="bi bi-check2"></i>Sustainable business practices</p>
+                    <p><i class="bi bi-check2"></i>Continuous innovation</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="partner scroll-animate" #partnerSection appLazyLoad>
+        <div class="text">
+            <div class="heading">
+                <h3>Why you should partner with <br><span class="text-danger">Parasya</span></h3>
+            </div>
+            <div class="content">
+                <p>
+                    At Parasya, we understand that every business is unique. Our tailored solutions encompass a wide
+                    spectrum of services, from strategic planning and financial management to cutting-edge technology
+                    implementation. We believe that a holistic approach to business is key to sustained success, which
+                    is why our team of experts collaborates closely with you to identify opportunities, mitigate risks,
+                    and create a roadmap to achieve your goals.
+                </p>
+            </div>
+        </div>
+        <div class="list">
+            <h4>Industries We Serve</h4>
+            <div class="items">
+                <p>Technology & Software</p>
+                <p>Education</p>
+                <p>Finance & Banking</p>
+                <p>Healthcare</p>
+                <p>Retail & E-Commerce</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="image-flow" appLazyLoad>
+        <div class="carousel-row top">
+            <div class="carousel-track">
+                <img *ngFor="let img of secondCarouselImagesTop" [src]="img" loading="lazy" />
+                <img *ngFor="let img of secondCarouselImagesTop" [src]="img" loading="lazy" />
+            </div>
+        </div>
+        <div class="carousel-row bottom">
+            <div class="carousel-track reverse">
+                <img *ngFor="let img of secondCarouselImagesBottom" [src]="img" loading="lazy" />
+                <img *ngFor="let img of secondCarouselImagesBottom" [src]="img" loading="lazy" />
+            </div>
+        </div>
+    </div>
+
+    <div class="blogs scroll-animate" #blogsSection appLazyLoad>
+        <div class="text">
+            <div class="heading">
+                <h3>Latest <span class="text-danger">Blogs</span></h3>
+            </div>
+            <div class="content">
+                <p>Stay updated with our latest thoughts on digital marketing and technology</p>
+            </div>
+        </div>
+        <div class="cards">
+            <div class="loop" *ngFor="let blog of blogPosts">
+                <div class="card">
+                    <img [src]="blog.image" loading="lazy" class="card-img-top" [alt]="blog.title">
+                    <div class="card-body">
+                        <small>{{blog.date}}</small>
+                        <h5>{{blog.title}}</h5>
+                        <p>{{blog.shortContent}}</p>
+                        <span class="text-danger" style="cursor: pointer;" (click)="goToBlogSection()">Read
+                            More <i class="bi bi-arrow-right"></i></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="services scroll-animate" #servicesSection appLazyLoad>
+        <div class="text">
+            <div class="heading">
+                <h3>Our Featured <span class="text-danger">Services</span></h3>
+            </div>
+            <div class="content">
+                <p>Transforming businesses through innovative digital solutions and strategic marketing approaches</p>
+            </div>
+        </div>
+        <div class="cards">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title"><i class="bi bi-code-slash"></i></h5>
+                    <h6 class="card-subtitle mb-2">Software Development</h6>
+                    <p class="card-text">Custom-built web and mobile applications that deliver exceptional user
+                        experiences and drive business growth.</p>
+                    <p><i class="bi bi-check2"></i>AI Integrated</p>
+                    <p><i class="bi bi-check2"></i>Modern Technologies</p>
+                    <p><i class="bi bi-check2"></i>SEO Optimization</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title"><i class="bi bi-bar-chart"></i></h5>
+                    <h6 class="card-subtitle mb-2">Digital Marketing</h6>
+                    <p class="card-text">Strategic digital marketing solutions that enhance your brand visibility and
+                        drive meaningful engagement.</p>
+                    <p><i class="bi bi-check2"></i>Social Media Marketing</p>
+                    <p><i class="bi bi-check2"></i>Content Strategy</p>
+                    <p><i class="bi bi-check2"></i>PPC Campaigns</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title"><i class="bi bi-bank"></i></h5>
+                    <h6 class="card-subtitle mb-2">Influencer Marketing</h6>
+                    <p class="card-text">Connect with influential voices in your industry to amplify your brand message
+                        and reach new audiences.</p>
+                    <p><i class="bi bi-check2"></i>Influencer Partnerships</p>
+                    <p><i class="bi bi-check2"></i>Campaign Management</p>
+                    <p><i class="bi bi-check2"></i>ROI Tracking</p>
+                </div>
+            </div>
+        </div>
+        <div class="button">
+            <button class="magnetic-btn" (mousemove)="onButtonHover($event)" (mouseleave)="resetButtonHover()"
+                (click)="goToServicesPage()">View All Services</button>
+        </div>
+    </div>
+
+    <div class="testmonials scroll-animate" #testimonialsSection appLazyLoad>
+        <div class="text">
+            <div class="heading">
+                <h3>What Our <span class="text-danger">Clients</span> Say</h3>
+            </div>
+            <div class="content">
+                <p>Discover why leading companies choose our solution to drive their success</p>
+            </div>
+        </div>
+        <div class="testimonial-cards">
+            <div class="card" *ngFor="let itm of testimonials">
+                <div class="head">
+                    <img [src]="itm.image" loading="lazy" [alt]="itm.name">
+                    <h5>{{ itm.name }}</h5>
+                </div>
+                <div class="test">
+                    <p>{{ itm.content }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="logogrid scroll-animate" #logosSection appLazyLoad>
+        <div class="text">
+            <div class="heading">
+                <h3>We Cherish Our <span class="text-danger">Customers</span></h3>
+            </div>
+        </div>
+        <div class="grid">
+            <div class="image" *ngFor="let logo of logoGrid">
+                <img [src]="logo.src" loading="lazy" [alt]="logo.alt" />
+            </div>
+        </div>
+    </div>
+
+</div>

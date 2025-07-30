@@ -1,0 +1,222 @@
+<div class="container-fluid portfolio-section">
+    <div class="heading mb-4">
+        <h1 class="display-5 fw-bold">Our <span class="text-danger">Portfolio</span></h1>
+        <p class="lead">Discover our latest work and success stories</p>
+    </div>
+
+    <ul ngbNav #nav="ngbNav" class="nav custom-nav-tabs mb-4 justify-content-center" (navChange)="onTabChange($event)">
+        <li ngbNavItem>
+            <button ngbNavLink class="nav-link-custom"><i class="bi bi-palette2 me-2"></i> Branding</button>
+            <ng-template ngbNavContent>
+                <div class="tab-fade show">
+                    <div class="row g-3 mt-3">
+                        <div class="col-md-3" *ngFor="let branding of brandingsList">
+                            <div class="card h-100 text-white bg-dark d-flex flex-column">
+                                <img [src]="branding.image" class="card-img-top" style="background-color: white;" [alt]="branding.name">
+                                <div class="card-body flex-grow-1">
+                                    <h5 class="card-title">{{ branding.name }}</h5>
+                                    <p class="card-text">{{ branding.description }}</p>
+                                </div>
+                                <div
+                                    class="card-footer bg-transparent border-top-0 d-flex justify-content-center gap-3">
+                                    <button class="btn btn-outline-light btn-md px-4"
+                                        (click)="openBrandingModal(brandingModal, branding)">Branding</button>
+                                    <!-- <a [href]="branding.websiteUrl" target="_blank"
+                                        class="btn btn-danger btn-md px-4">Visit</a> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </ng-template>
+        </li>
+        <li ngbNavItem>
+            <button ngbNavLink class="nav-link-custom"><i class="bi bi-phone me-2"></i> Mobile Apps</button>
+            <ng-template ngbNavContent>
+                <div class="tab-fade show">
+                    <div class="d-flex flex-column flex-md-row">
+                        <!-- Left: Vertical Nav Pills -->
+                        <div ngbNav #appsNav="ngbNav" [(activeId)]="active"
+                            class="nav-pills flex-md-column mb-3 mb-md-0">
+                            <ng-container *ngFor="let category of getMobileAppCategories()">
+                                <ng-container [ngbNavItem]="category">
+                                    <button ngbNavLink>{{ category }}</button>
+                                    <ng-template ngbNavContent>
+                                        <div class="row g-3">
+                                            <div class="col-md-3" *ngFor="let app of groupedMobileApps[category]">
+                                                <div class="card h-100 text-white bg-dark d-flex flex-column">
+                                                    <img [src]="app.image" (error)="onImageError($event)"
+                                                        class="card-img-top" [alt]="app.name">
+                                                    <div class="card-body flex-grow-1">
+                                                        <h5 class="card-title">{{ app.name }}</h5>
+                                                        <p class="card-text">{{ app.appOverview }}</p>
+                                                    </div>
+                                                    <div
+                                                        class="card-footer bg-transparent border-top-0 d-flex justify-content-center gap-3">
+                                                        <button class="btn btn-outline-light btn-md px-4"
+                                                            (click)="openAppModal(mobileAppModal, app)">Details</button>
+                                                        <a *ngIf="app.appUrl" [href]="app.appUrl" target="_blank"
+                                                            class="btn btn-danger btn-md px-4">Visit</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </ng-template>
+                                </ng-container>
+                            </ng-container>
+                        </div>
+
+                        <!-- Right: Content Area -->
+                        <div [ngbNavOutlet]="appsNav" class="ms-md-4 flex-grow-1"></div>
+                    </div>
+                </div>
+            </ng-template>
+
+        </li>
+        <li ngbNavItem>
+            <button ngbNavLink class="nav-link-custom"><i class="bi bi-laptop me-2"></i> Web Solutions</button>
+            <ng-template ngbNavContent>
+                <div class="tab-fade show">
+                    <div class="d-flex flex-column flex-md-row">
+                        <!-- Left: Vertical Nav Pills -->
+                        <div ngbNav #appsNav="ngbNav" [(activeId)]="active"
+                            class="nav-pills flex-md-column mb-3 mb-md-0">
+                            <ng-container *ngFor="let category of getWebAppCategories()">
+                                <ng-container [ngbNavItem]="category">
+                                    <button ngbNavLink>{{ category }}</button>
+                                    <ng-template ngbNavContent>
+                                        <div class="row g-3">
+                                            <div class="col-md-3" *ngFor="let app of groupedWebApps[category]">
+                                                <div class="card h-100 text-white bg-dark d-flex flex-column">
+                                                    <img [src]="app.image" (error)="onImageError($event)"
+                                                        class="card-img-top" [alt]="app.name">
+                                                    <div class="card-body flex-grow-1">
+                                                        <h5 class="card-title">{{ app.name }}</h5>
+                                                        <p class="card-text">{{ app.appOverview }}</p>
+                                                    </div>
+                                                    <div
+                                                        class="card-footer bg-transparent border-top-0 d-flex justify-content-center gap-3">
+                                                        <button class="btn btn-outline-light btn-md px-4"
+                                                            (click)="openAppModal(mobileAppModal, app)">Details</button>
+                                                        <a *ngIf="app.appUrl" [href]="app.appUrl" target="_blank"
+                                                            class="btn btn-danger btn-md px-4">Visit</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </ng-template>
+                                </ng-container>
+                            </ng-container>
+                        </div>
+
+                        <!-- Right: Content Area -->
+                        <div [ngbNavOutlet]="appsNav" class="ms-md-4 flex-grow-1"></div>
+                    </div>
+                </div>
+            </ng-template>
+        </li>
+    </ul>
+
+    <div [ngbNavOutlet]="nav"></div>
+</div>
+
+<ng-template #brandingModal let-modal>
+    <div class="modal-header bg-dark text-white">
+        <h5 class="modal-title">{{ selectedBranding?.name }}</h5>
+        <button type="button" class="btn-close btn-close-white" aria-label="Close"
+            (click)="modal.dismiss('Cross click')"></button>
+    </div>
+
+    <div class="modal-body bg-black text-white" style="max-height: 75vh; overflow-y: auto;">
+        <!-- Top Overview Row -->
+        <div class="row mb-4">
+            <div class="col-md-6">
+                <img [src]="selectedBranding?.image" alt="Logo" style="background-color: white;" class="img-fluid rounded shadow-sm w-100">
+            </div>
+            <div class="col-md-6">
+                <h6 class="text-danger fw-bold">Overview</h6>
+                <p>{{ selectedBranding?.brandingOverview }}</p>
+                <h6 class="text-danger fw-bold">Problem Statement</h6>
+                <p>{{ selectedBranding?.problemStatement }}</p>
+                <h6 class="text-danger fw-bold">Location</h6>
+                <p>{{ selectedBranding?.location }}</p>
+            </div>
+        </div>
+
+        <!-- Logic Points -->
+        <div class="mb-5">
+            <h5 class="text-danger mb-3">Logic Points</h5>
+            <div class="row g-4">
+                <div class="col-md-6" *ngFor="let logic of selectedBranding?.logicPoints">
+                    <div class="d-flex text-white rounded shadow-sm p-2 h-100">
+                        <img [src]="logic.image" alt="{{ logic.title }}" class="me-3 rounded"
+                            style="width: 100px; height: 100px; object-fit: cover;">
+                        <div>
+                            <h6 class="fw-bold mb-1"># {{ logic.title }}</h6>
+                            <p class="mb-0">{{ logic.description }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Branding Images -->
+        <div class="mb-5">
+            <h5 class="text-danger mb-3">Branding Images</h5>
+            <div class="row g-3">
+                <div class="col-md-3" *ngFor="let img of selectedBranding?.brandingImages">
+                    <img [src]="img" class="img-fluid rounded shadow-sm w-100" alt="Branding Image">
+                </div>
+            </div>
+        </div>
+
+        <!-- Testimonials -->
+        <div>
+            <h5 class="text-danger mb-3">Testimonials</h5>
+            <div class="bg-secondary text-white rounded p-3 mb-3"
+                *ngFor="let testimonial of selectedBranding?.testimonials">
+                <blockquote class="blockquote mb-0">
+                    <p>{{ testimonial.text }}</p>
+                    <footer class="blockquote-footer text-white-50">{{ testimonial.author }}</footer>
+                </blockquote>
+            </div>
+        </div>
+    </div>
+</ng-template>
+
+<ng-template #mobileAppModal let-modal>
+    <div class="modal-header bg-dark text-white">
+        <h5 class="modal-title">{{ selectedApp?.name }}</h5>
+        <button type="button" class="btn-close btn-close-white" aria-label="Close"
+            (click)="modal.dismiss('Cross click')"></button>
+    </div>
+
+    <div class="modal-body bg-black text-white" style="max-height: 75vh; overflow-y: auto;">
+        <!-- Overview -->
+        <div class="row mb-4">
+            <div class="col-md-6">
+                <img [src]="selectedApp?.image" (error)="onImageError($event)" alt="App Logo"
+                    class="img-fluid rounded shadow-sm w-100" />
+            </div>
+            <div class="col-md-6">
+                <h6 class="text-danger fw-bold">Overview</h6>
+                <p>{{ selectedApp?.appOverview }}</p>
+                <h6 class="text-danger mb-3">App Statement</h6>
+                <p>{{ selectedApp?.appStatement }}</p>
+                <h6 class="text-danger fw-bold">Location</h6>
+                <p>{{ selectedApp?.location }}</p>
+            </div>
+        </div>
+
+        <!-- Testimonials -->
+        <div>
+            <h5 class="text-danger mb-3">Testimonials</h5>
+            <div class="bg-secondary text-white rounded p-3 mb-3" *ngFor="let testimonial of selectedApp?.testimonials">
+                <blockquote class="blockquote mb-0">
+                    <p>{{ testimonial.text }}</p>
+                    <footer class="blockquote-footer text-white-50">{{ testimonial.author }}</footer>
+                </blockquote>
+            </div>
+        </div>
+    </div>
+</ng-template>

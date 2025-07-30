@@ -1,0 +1,445 @@
+.footer {
+    background-color: #dc2626;
+    color: white;
+    padding: 2rem 0rem 2rem 0rem;
+    text-align: center;
+}
+
+.footer-body {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 3rem 4rem 0rem 4rem;
+    text-align: left;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.left-column {
+    flex: 1;
+    min-width: 280px;
+}
+
+.right-column {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.footer-title {
+    font-size: 4rem;
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.contact-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: flex-start;
+    margin-bottom: 1rem;
+}
+
+.pill {
+    padding: 0.75rem 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.526);
+    border-radius: 999px;
+    color: white;
+    font-weight: 500;
+    font-size: 1.1rem;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.magnetic-btn {
+    position: relative;
+    display: inline-block;
+    transition: transform 0.1s ease;
+}
+
+.magnetic-btn:hover {
+    transform: scale(1.02);
+}
+
+.subscribe-form {
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 2rem;
+}
+
+.subscribe-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.subscribe-wrapper input[type="email"] {
+    width: 100%;
+    padding: 0.75rem 10rem 0.75rem 1rem;
+    border: none;
+    border-radius: 999px;
+    font-size: 1rem;
+    outline: none;
+}
+
+.subscribe-wrapper button {
+    position: absolute;
+    top: 50%;
+    right: 0.1rem;
+    transform: translateY(-50%);
+    background-color: #aaa7a7;
+    color: black;
+    border: none;
+    border-radius: 999px;
+    padding: 0.7rem 0.7rem;
+    cursor: pointer;
+    font-weight: 400;
+    transition: background-color 0.3s ease;
+}
+
+.subscribe-wrapper button:hover {
+    background-color: #dc2626;
+}
+
+.footer-divider {
+    border-top: 1px solid white;
+    margin: 5rem 0 2rem;
+    position: relative;
+    height: 90px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
+.footer-desktop .get-in-touch-wrapper {
+    position: absolute;
+    top: -90px;
+    right: 2rem;
+}
+
+.footer-desktop .get-in-touch {
+    position: relative;
+    display: inline-block;
+    background-color: white;
+    color: #dc2626;
+    font-weight: 600;
+    font-size: 1.1rem;
+    text-decoration: none;
+    padding: 3rem 2rem;
+    border-radius: 50%;
+    width: 180px;
+    height: 180px;
+    line-height: 6rem;
+    text-align: center;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.footer-desktop .get-in-touch::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background-color: black;
+    z-index: -1;
+    transition: height 0.4s ease;
+    border-radius: 50%;
+}
+
+.footer-desktop .get-in-touch:hover::before {
+    height: 100%;
+}
+
+.footer-desktop .get-in-touch:hover {
+    color: white;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.footer-social {
+    display: flex;
+    gap: 1.5rem;
+    font-size: 1.5rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-social a {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: #fff;
+    color: #262626;
+    font-size: 1.1rem;
+    text-decoration: none;
+    overflow: hidden;
+    z-index: 1;
+    border: 2px solid #fff;
+    transition: color 0.5s ease;
+}
+
+.footer-social a i {
+    position: relative;
+    z-index: 2;
+    transition: transform 0.5s ease, color 0.5s ease;
+}
+
+.footer-social a::before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: top 0.5s ease;
+    z-index: 1;
+}
+
+.footer-social a:hover::before {
+    top: 0;
+}
+
+.footer-social a:hover i {
+    transform: rotateY(360deg);
+    color: #fff;
+}
+
+/* Individual background colors */
+.footer-social a:nth-child(1)::before {
+    background: #3b5999;
+}
+
+/* Facebook */
+.footer-social a:nth-child(2)::before {
+    background: #0077b5;
+}
+
+/* LinkedIn */
+.footer-social a:nth-child(3)::before {
+    background: #FF0000;
+}
+
+/* YouTube */
+.footer-social a:nth-child(4)::before {
+    background: #E1306C;
+}
+
+/* Instagram */
+.footer-social a:nth-child(5)::before {
+    background: #000000;
+}
+
+/* Twitter/X */
+.footer-social a:nth-child(6)::before {
+    background: #25D366;
+}
+
+.footer-social a:hover {
+    background-color: white;
+    transform: translateY(-5px);
+}
+
+.footer-links {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-links a {
+    position: relative;
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: transform 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+}
+
+.footer-links a:hover {
+    transform: translateY(-3px);
+    color: white;
+}
+
+.footer-links a::after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.footer-links a:hover::after {
+    transform: scaleX(1);
+}
+
+.footer-mobile {
+    display: none;
+}
+
+.footer-desktop {
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .footer-mobile {
+        display: block;
+    }
+
+    .footer-desktop {
+        display: none;
+    }
+}
+
+.footer-mobile .footer-body {
+    padding: 1.2rem;
+    text-align: center;
+}
+
+.footer-mobile .footer-title {
+    text-align: center;
+    font-size: 2.2rem;
+}
+
+.footer-mobile .footer-top {
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-mobile .left-column,
+.footer-mobile .right-column {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-mobile .pill {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+    padding: 1rem;
+    border-radius: 999px;
+    border: 1px solid white;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-decoration: none;
+    margin-bottom: 1rem;
+    box-sizing: border-box;
+}
+
+
+.footer-mobile .contact-info {
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.footer-mobile .subscribe-form {
+    max-width: 100%;
+}
+
+.footer-mobile .subscribe-wrapper input[type="email"] {
+    padding: 0.75rem 7rem 0.75rem 1rem;
+    width: 100%;
+    border-radius: 999px;
+    border: none;
+    outline: none;
+}
+
+.footer-mobile .subscribe-wrapper button {
+    padding: 0.75rem 1rem;
+    font-size: 0.9rem;
+    position: absolute;
+    top: 50%;
+    right: 0.3rem;
+    transform: translateY(-50%);
+    border-radius: 999px;
+    border: none;
+    background-color: #aaa7a7;
+    color: black;
+}
+
+.footer-mobile .footer-divider {
+    height: 1px;
+    background-color: white;
+    width: 100%;
+    margin: 2rem 0;
+}
+
+.footer-mobile .get-in-touch-wrapper {
+    position: static;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-mobile .get-in-touch {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    padding: 0.75rem 2rem;
+    border-radius: 999px;
+    font-size: 1rem;
+    line-height: normal;
+    background-color: white;
+    color: #dc2626;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.footer-mobile .get-in-touch:hover {
+    background-color: black;
+}
+
+.footer-mobile .footer-bottom {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2rem;
+    display: flex;
+}
+
+.footer-mobile .footer-social,
+.footer-mobile .footer-links {
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.footer-mobile .footer-links a,
+.footer-mobile .footer-social a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-mobile .footer-social a {
+    color: black;
+}

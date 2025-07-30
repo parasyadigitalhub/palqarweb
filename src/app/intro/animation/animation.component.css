@@ -1,0 +1,17 @@
+.intro-container {
+    height: 100vh;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    transition: opacity 0.2s ease;
+    opacity: 1;
+}
+
+.fade-out {
+    opacity: 0;
+}

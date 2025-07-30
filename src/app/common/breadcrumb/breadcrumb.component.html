@@ -1,0 +1,26 @@
+<div *ngIf="breadcrumbs.length" class="logo-breadcrumb-container">
+  <img src="/parasya/logo-white.webp" alt="Logo" class="logo-img">
+
+  <nav aria-label="breadcrumb" class="breadcrumb-nav">
+    <ol class="breadcrumb p-2 px-3 rounded shadow-sm m-0">
+      <li class="breadcrumb-item" *ngFor="let breadcrumb of breadcrumbs; let last = last">
+        <ng-container *ngIf="!last">
+          <a [routerLink]="breadcrumb.url" class="text-decoration-none">
+            {{ breadcrumb.label }}
+          </a>
+        </ng-container>
+
+        <ng-container *ngIf="last">
+          <ng-container *ngIf="breadcrumb.label === 'Home'">
+            <a [routerLink]="breadcrumb.url" class="text-decoration-none">
+              {{ breadcrumb.label }}
+            </a>
+          </ng-container>
+          <ng-container *ngIf="breadcrumb.label !== 'Home'">
+            <span>{{ breadcrumb.label }}</span>
+          </ng-container>
+        </ng-container>
+      </li>
+    </ol>
+  </nav>
+</div>

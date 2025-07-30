@@ -1,0 +1,97 @@
+<footer class="footer footer-desktop">
+    <div class="footer-body">
+
+        <h2 class="footer-title">Elevating your identity</h2>
+
+        <!-- Top section -->
+        <div class="footer-top">
+            <div class="left-column">
+                <div class="contact-info">
+                    <a class="pill magnetic-btn" (mousemove)="onButtonHover($event)" (mouseleave)="resetButtonHover()" href="mailto:info@parasya.in">Info&#64;parasya.in</a>
+                    <a class="pill magnetic-btn" (mousemove)="onButtonHover($event)" (mouseleave)="resetButtonHover()" href="tel:+919995498218">+91 99954 98218</a>
+                </div>
+            </div>
+
+            <div class="right-column">
+                <div class="subscribe-form">
+                    <div class="subscribe-wrapper">
+                        <input type="email" placeholder="Your email address" />
+                        <button>Subscribe to newsletter</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Middle section with border -->
+        <div class="footer-divider">
+            <div class="get-in-touch-wrapper">
+                <a class="get-in-touch" (click)="goTo()">Get In Touch</a>
+            </div>
+        </div>
+
+        <!-- Bottom section -->
+        <div class="footer-bottom">
+            <div class="footer-social">
+                <a href="https://www.facebook.com/share/14iEd6PwQV/?mibextid=wwXIfr" target="_blank"><i
+                        class="bi bi-facebook"></i></a>
+                <a href="https://www.linkedin.com/company/parasyatechnologies/" target="_blank"><i
+                        class="bi bi-linkedin"></i></a>
+                <a href="https://youtube.com/@parasya.?si=cpElaynFajc3RCCG" target="_blank"><i
+                        class="bi bi-youtube"></i></a>
+                <a href="https://www.instagram.com/parasya.in?igsh=Y3ZkNWUzNGYxM29q" target="_blank"><i
+                        class="bi bi-instagram"></i></a>
+                <a href="https://x.com/parasya_in?s=21" target="_blank"><i class="bi bi-twitter-x"></i></a>
+                <a href="https://wa.me/919995498218" target="_blank"><i class="bi bi-whatsapp"></i></a>
+            </div>
+            <div class="footer-links">
+                <a (click)="navigate('/careers')">Careers</a>
+                <a (click)="navigate('/services')">Services</a>
+            </div>
+        </div>
+
+    </div>
+</footer>
+
+<!-- Mobile Footer -->
+<footer class="footer footer-mobile">
+    <div class="footer-body">
+        <h2 class="footer-title">Elevating your identity</h2>
+
+        <div class="contact-info">
+            <a class="pill" href="mailto:info@parasya.in">Info&#64;parasya.in</a>
+            <a class="pill" href="tel:+919995498218">+91 99954 98218</a>
+        </div>
+
+        <div class="subscribe-form">
+            <div class="subscribe-wrapper">
+                <input type="email" placeholder="Your email address" />
+                <button>Subscribe</button>
+            </div>
+        </div>
+
+        <div class="get-in-touch-wrapper">
+            <a class="get-in-touch" (click)="goTo()">Get In Touch</a>
+        </div>
+
+        <div class="footer-divider"></div>
+
+        <div class="footer-links mb-4">
+            <a (click)="navigate('/careers')">Careers</a>
+            <a (click)="navigate('/services')">Services</a>
+        </div>
+
+        <div class="footer-social">
+            <a href="https://www.facebook.com/share/14iEd6PwQV/?mibextid=wwXIfr" target="_blank"><i
+                    class="bi bi-facebook"></i></a>
+            <a href="https://www.linkedin.com/company/parasyatechnologies/" target="_blank"><i
+                    class="bi bi-linkedin"></i></a>
+            <a href="https://youtube.com/@parasya.?si=cpElaynFajc3RCCG" target="_blank"><i
+                    class="bi bi-youtube"></i></a>
+            <a href="https://www.instagram.com/parasya.in?igsh=Y3ZkNWUzNGYxM29q" target="_blank"><i
+                    class="bi bi-instagram"></i></a>
+            <a href="https://x.com/parasya_in?s=21" target="_blank"><i class="bi bi-twitter-x"></i></a>
+            <a href="https://wa.me/919995498218" target="_blank"><i class="bi bi-whatsapp"></i></a>
+        </div>
+
+    </div>
+</footer>

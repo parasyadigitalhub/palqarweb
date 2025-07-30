@@ -1,0 +1,44 @@
+<header class="app-header" (click)="toggleMenu()">
+    <span class="menu-icon" [class.open]="isMenuOpen">
+        <span class="bar top"></span>
+        <span class="bar middle"></span>
+        <span class="bar bottom"></span>
+    </span>
+</header>
+
+<div class="side-menu" [class.open]="isMenuOpen">
+    <ul>
+        <li (click)="navigate('/home')">Home</li>
+        <li (click)="navigate('/about')">About</li>
+        <li (click)="navigate('/services')">Services</li>
+        <li (click)="navigate('/careers')">Careers</li>
+        <li (click)="navigate('/contacts')">Contact</li>
+        <li (click)="navigate('/blog')">Blog</li>
+        <li (click)="navigate('/portfolio')">Portfolio</li>
+    </ul>
+
+    <div class="social">
+        <a href="https://x.com/parasya_in?s=21" target="_blank" aria-label="Visit us on Twitter">
+            <i class="bi bi-twitter-x"></i>
+        </a>
+        <a href="https://www.instagram.com/parasya.in?igsh=Y3ZkNWUzNGYxM29q" target="_blank"
+            aria-label="Visit us on Instagram">
+            <i class="bi bi-instagram"></i>
+        </a>
+        <a href="https://www.linkedin.com/company/parasyatechnologies/" target="_blank"
+            aria-label="Visit us on LinkedIn">
+            <i class="bi bi-linkedin"></i>
+        </a>
+        <a href="https://www.facebook.com/share/14iEd6PwQV/?mibextid=wwXIfr" target="_blank"
+            aria-label="Visit us on Facebook">
+            <i class="bi bi-facebook"></i>
+        </a>
+        <a href="https://wa.me/919995498218" target="_blank" aria-label="Chat with us on WhatsApp">
+            <i class="bi bi-whatsapp"></i>
+        </a>
+        <a href="https://youtube.com/@parasya.?si=cpElaynFajc3RCCG" target="_blank" aria-label="Visit us on YouTube">
+            <i class="bi bi-youtube"></i>
+        </a>
+    </div>
+
+</div>

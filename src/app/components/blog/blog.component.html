@@ -1,0 +1,41 @@
+<div class="container-fluid">
+    <div class="heading">
+        <div class="our">
+            <h1>Our <span class="text-danger">Blogs</span></h1>
+        </div>
+        <div class="para">
+            <p>Stay updated with our latest thoughts on digital marketing and technology</p>
+        </div>
+    </div>
+    <div class="cards">
+        <div class="loop" *ngFor="let blog of blogPosts">
+            <div class="card" (click)="openBlogModal(blogModal,blog)">
+                <img [src]="blog.image" class="card-img-top" [alt]="blog.title">
+                <div class="card-body">
+                    <small>{{blog.date}}</small>
+                    <h5>{{blog.title}}</h5>
+                    <p>{{blog.shortContent}}</p>
+                    <span class="text-danger" style="cursor: pointer;" (click)="openBlogModal(blogModal,blog); $event.stopPropagation()">Read More <i class="bi bi-arrow-right"></i></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<ng-template #blogModal let-modal>
+  <div class="modal-content">
+    <div class="modal-header border-0">
+      <div>
+        <h4 class="modal-title m-0">{{ selectedBlog?.title }}</h4>
+        <small style="color: white;">{{ selectedBlog?.date }}</small>
+      </div>
+      <button type="button" aria-label="Close" class="btn-close btn-close-white" (click)="modal.close()"></button>
+    </div>
+
+    <div class="modal-body">
+      <img *ngIf="selectedBlog?.image" [src]="selectedBlog.image" [alt]="selectedBlog.title"
+           class="img-fluid rounded mb-3" />
+      <p class="lh-base" [innerHTML]="selectedBlog?.fullContent"></p>
+    </div>
+  </div>
+</ng-template>

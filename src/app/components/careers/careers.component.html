@@ -1,0 +1,111 @@
+<div class="container-fluid careers">
+    <div class="left">
+        <div class="heading">
+            <h4>Join Us</h4>
+        </div>
+
+        <div class="accordion" id="accordionCareers">
+            <div class="accordion-item" *ngFor="let job of openings; let i = index">
+                <h2 class="accordion-header" [attr.id]="'career-heading' + i">
+                    <button class="accordion-button" [class.collapsed]="i !== 0" type="button" data-bs-toggle="collapse"
+                        [attr.data-bs-target]="'#career-collapse' + i" [attr.aria-expanded]="i === 0 ? 'true' : 'false'"
+                        [attr.aria-controls]="'career-collapse' + i">
+                        {{ job.position }}
+                    </button>
+                </h2>
+                <div [id]="'career-collapse' + i" class="accordion-collapse collapse" [class.show]="i === 0"
+                    [attr.aria-labelledby]="'career-heading' + i" data-bs-parent="#accordionCareers">
+                    <div class="accordion-body">
+                        <div class="job-detail">
+                            <p><strong>Experience:</strong> {{ job.experience }}</p>
+                            <p><strong>Description:</strong><br />{{ job.description || 'N/A' }}</p>
+                            <div *ngIf="job.responsibility; else noResp">
+                                <p><strong>Responsibilities:</strong></p>
+                                <ul>
+                                    <li *ngFor="let line of job.responsibility.split('\n')">{{ line }}</li>
+                                </ul>
+                            </div>
+                            <ng-template #noResp>
+                                <p><strong>Responsibilities:</strong> N/A</p>
+                            </ng-template>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="right">
+        <div class="card">
+            <div class="card-body">
+                <form [formGroup]="careerForm" (ngSubmit)="onCareerSubmit()">
+                    <div class="row">
+                        <div class="form-group col-md-6">
+                            <label>Name</label>
+                            <input class="form-control" formControlName="name" placeholder="Your full name" />
+                            <div class="error"
+                                *ngIf="careerForm.get('name')?.touched && careerForm.get('name')?.invalid">
+                                Name is required.
+                            </div>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label>Email</label>
+                            <input class="form-control" formControlName="email" placeholder="you@example.com" />
+                            <div class="error"
+                                *ngIf="careerForm.get('email')?.touched && careerForm.get('email')?.invalid">
+                                <span *ngIf="careerForm.get('email')?.errors?.['required']">Email is required.</span>
+                                <span *ngIf="careerForm.get('email')?.errors?.['email']">Enter a valid email.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-6">
+                            <label>Phone Number</label>
+                            <input class="form-control" formControlName="phone" placeholder="+91 99999 99999" />
+                            <div class="error"
+                                *ngIf="careerForm.get('phone')?.touched && careerForm.get('phone')?.invalid">
+                                Phone number is required.
+                            </div>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label>Apply For</label>
+                            <select class="form-control" formControlName="position">
+                                <option value="">Select position</option>
+                                <option *ngFor="let job of openings" [value]="job.position">{{ job.position }}</option>
+                            </select>
+                            <div class="error"
+                                *ngIf="careerForm.get('position')?.touched && careerForm.get('position')?.invalid">
+                                Please select a position.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Google Drive Resume Link</label>
+                        <input class="form-control" formControlName="resumeLink"
+                            placeholder="Paste your Google Drive resume link here" />
+                        <div class="error"
+                            *ngIf="careerForm.get('resumeLink')?.touched && careerForm.get('resumeLink')?.invalid">
+                            Resume link is required.
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Comments</label>
+                        <textarea class="form-control" formControlName="comments"
+                            placeholder="Tell us more..."></textarea>
+                    </div>
+                    <button class="btn btn-danger mt-3 form-control" type="submit"
+                        [disabled]="careerForm.invalid || isSubmitting">
+                        <ng-container *ngIf="!isSubmitting; else loaderContent">
+                            Submit Application
+                        </ng-container>
+                        <ng-template #loaderContent>
+                            <div class="loader mx-auto"></div>
+                        </ng-template>
+                    </button>
+                </form>
+
+            </div>
+        </div>
+
+    </div>
+</div>

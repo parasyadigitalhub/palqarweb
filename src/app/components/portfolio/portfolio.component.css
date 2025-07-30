@@ -1,0 +1,190 @@
+.portfolio-section {
+  background-color: #000;
+  color: #fff;
+  padding: 3rem 1rem;
+}
+
+.heading h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.heading p {
+  font-size: 1.1rem;
+  color: #cccccc;
+  text-align: center;
+}
+
+.custom-nav-tabs {
+  border-bottom: none;
+  /* background-color: #121212; */
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.custom-nav-tabs .nav-link-custom {
+  background-color: #1e1e1e;
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 1.1rem;
+  padding: 1rem 1.5rem;
+  border: none;
+  border-radius: 0;
+  transition: all 0.3s ease;
+}
+
+.custom-nav-tabs .nav-link-custom:hover {
+  background-color: #000;
+  color: #f8f9fa;
+}
+
+.custom-nav-tabs .nav-link-custom.active,
+.custom-nav-tabs .nav-link-custom:focus,
+.custom-nav-tabs .nav-link-custom[aria-current="page"] {
+  background-color: #dc3545;
+  /* Bootstrap danger color */
+  color: #ffffff;
+  font-weight: bold;
+  box-shadow: inset 0 -3px 0 #fff;
+}
+
+.tab-fade {
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.nav-link-custom {
+  position: relative;
+}
+
+.nav-link-custom::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 0;
+  height: 3px;
+  background-color: #dc3545;
+  transition: all 0.3s ease;
+}
+
+.nav-link-custom:hover::after {
+  left: 0;
+  width: 100%;
+}
+
+/* .custom-nav-tabs {
+  background: rgba(213, 13, 13, 0.932);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+} */
+
+.card {
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+
+.card-img-top {
+  object-fit: cover;
+  height: 200px;
+}
+
+.modal-body h5,
+.modal-body h6 {
+  color: #dc3545;
+}
+
+.modal-body p {
+  color: #e0e0e0;
+}
+
+.modal-body {
+  background: #0d0d0d;
+  border-radius: 0 0 0.5rem 0.5rem;
+}
+
+.modal-header {
+  border-bottom: 1px solid #dc3545;
+}
+
+img[alt="Logo"],
+img[alt="App Logo"] {
+  height: 500px;
+  object-fit: cover;
+  width: 100%;
+  border-radius: 0.5rem;
+}
+
+.nav-pills {
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.nav-pills .nav-link {
+  background-color: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  text-align: left;
+  border-radius: 0.25rem;
+  transition: all 0.3s ease;
+  padding: 0.75rem 1rem;
+  width: 100%;
+}
+
+.nav-pills .nav-link:hover,
+.nav-pills .nav-link.active {
+  background-color: #fff;
+  border-color: #dc3545;
+  color: black;
+}
+
+.nav-pills.flex-md-column {
+  min-width: 220px;
+}
+
+@media (max-width: 767px) {
+
+  .portfolio-section{
+    padding: 0rem 1rem;
+    margin-top: -50px;
+  }
+
+  .nav-pills.flex-md-column {
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #555;
+    padding-bottom: 0.5rem;
+  }
+
+  .nav-pills .nav-link {
+    text-align: center;
+  }
+
+  [ngbNavOutlet] {
+    margin-top: 1rem;
+  }
+
+  img[alt="Logo"],
+  img[alt="App Logo"] {
+    height: 300px;
+    margin-bottom: 1rem;
+  }
+
+}
