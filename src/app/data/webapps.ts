@@ -5,7 +5,8 @@ export const webApps = [
         description: 'E-Commerce',
         image: '/portfolio/webapps/sportswindo/logo.webp',
         appOverview: 'Sports Windo offers high-quality sports gear, including football jerseys, boots, and training equipment, catering to athletes aiming to elevate their game. Sports Windo',
-        appStatement: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', appUrl: 'Sportswindo.com',
+        appStatement: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+        appUrl: 'Sportswindo.com',
         location: 'India',
         testimonials: [
             { author: 'John Doe', text: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit .' },
@@ -98,6 +99,19 @@ export const webApps = [
         appStatement: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
         appUrl: 'Luvwish.in',
         location: 'India',
+        testimonials: [
+            { author: 'John Doe', text: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit .' },
+        ]
+    },
+    {
+        id: 9,
+        name: 'CleanBy Maria',
+        description: 'Home Service',
+        image: '/portfolio/mobileapps/cleanbymaria/logo.webp',
+        appOverview: 'A professional cleaning service app with real-time availability, easy booking, and staff management features.',
+        appUrl: 'cleanmaria.com/',
+        appStatement: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+        location: 'California, US',
         testimonials: [
             { author: 'John Doe', text: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit .' },
         ]
