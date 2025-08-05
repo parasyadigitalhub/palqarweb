@@ -3,10 +3,11 @@ import { AfterViewInit, Component, ElementRef, HostListener, OnDestroy, OnInit, 
 import { Router } from '@angular/router';
 import { LazyLoadDirective } from '../../common/directives/lazy-load.directive';
 import { JsonLdServiceService } from './service/json-ld-service.service';
+import { HeaderHomeComponent } from "./header/header.component";
 
 @Component({
   selector: 'app-home',
-  imports: [CommonModule, LazyLoadDirective],
+  imports: [CommonModule, LazyLoadDirective, HeaderHomeComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })

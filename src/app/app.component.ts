@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Router, RouterOutlet } from '@angular/router';
 import { HeaderComponent } from "./common/header/header.component";
 import { FooterComponent } from "./common/footer/footer.component";
 import { AnimationComponent } from "./intro/animation/animation.component";
@@ -17,7 +17,13 @@ export class AppComponent {
 
   animationDone = false;
 
+  constructor(public router: Router) {}
+
   onAnimationDone() {
     this.animationDone = true;
+  }
+
+  isHomePage(): boolean {
+    return this.router.url === '/home' || this.router.url === '/';
   }
 }

@@ -1,0 +1,32 @@
+<!-- Mobile View -->
+<div class="d-lg-none">
+    <app-header></app-header>
+</div>
+
+<!-- Desktop View -->
+<div class="d-none d-lg-block">
+    <nav class="navbar navbar-expand-lg custom-navbar" [class.navbar-scrolled]="isScrolled">
+        <div class="container-fluid px-4">
+            <a class="navbar-brand me-auto me-lg-0" href="#">
+                <img src="/parasya/logo-white.webp" alt="Logo">
+            </a>
+
+            <div class="collapse navbar-collapse justify-content-center d-flex" id="navbarText">
+                <nav class="links" style="--items: 7;">
+                    <a (click)="navigate('/home')">Home</a>
+                    <a (click)="navigate('/about')">About</a>
+                    <a (click)="navigate('/services')">Services</a>
+                    <a (click)="navigate('/careers')">Careers</a>
+                    <a (click)="navigate('/contacts')">Contact</a>
+                    <a (click)="navigate('/blog')">Blog</a>
+                    <a (click)="navigate('/portfolio')">Portfolio</a>
+                    <span class="line"></span>
+                </nav>
+            </div>
+
+            <div>
+                <button class="btn btn-outline-light">Contact Now</button>
+            </div>
+        </div>
+    </nav>
+</div>
