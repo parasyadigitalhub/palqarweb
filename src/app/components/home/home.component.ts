@@ -190,7 +190,7 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
     const videoSchema = {
       "@context": "https://schema.org",
       "@type": "VideoObject",
-      "name": "Palqarw Motion - Elevating Your Identity",
+      "name": "Palqar Motion - Elevating Your Identity",
       "description": "Discover Palqar's vision and expertise in incorporation, legal support, digital marketing, and cutting-edge app & web development services. This video showcases our brand and mission.",
       "uploadDate": "2025-05-01T08:00:00+05:30",
       "duration": "PT0M51S",
