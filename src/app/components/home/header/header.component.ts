@@ -27,4 +27,8 @@ export class HeaderHomeComponent {
     this.router.navigate([url])
     this.isMenuOpen = false;
   }
+
+  openWhatsApp(): void {
+  window.open('https://wa.me/919995498218', '_blank');
+}
 }
