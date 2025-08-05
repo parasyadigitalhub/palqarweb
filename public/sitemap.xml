@@ -4,9 +4,9 @@ xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
   <url>
     <loc>https://palqar.com/home</loc>
       <video:video>
-        <video:thumbnail_loc>https://parasya.com/logo-white.webp</video:thumbnail_loc>
-        <video:title>Parasya Motion - Elevating Your Identity</video:title>
-        <video:description>Discover Parasya's vision and expertise in incorporation, legal support, digital marketing, and cutting-edge app and web development services. This video showcases our brand and mission.</video:description>
+        <video:thumbnail_loc>https://Palqar.com/logo-white.webp</video:thumbnail_loc>
+        <video:title>Palqar Motion - Elevating Your Identity</video:title>
+        <video:description>Discover Palqar's vision and expertise in incorporation, legal support, digital marketing, and cutting-edge app and web development services. This video showcases our brand and mission.</video:description>
         <video:content_loc>https://palqar.com/parasya-motion.mp4</video:content_loc>
         <video:duration>51</video:duration> <video:publication_date>2025-05-01T08:00:00+05:30</video:publication_date> 
       </video:video>

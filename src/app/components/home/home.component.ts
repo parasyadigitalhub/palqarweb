@@ -106,7 +106,7 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
       id: 3,
       name: "ILM",
       image: "/home/testimonials/lg9.webp",
-      content: "Parasya delivered outstanding video production work that perfectly captured our vision and made a lasting impression."
+      content: "Palqar delivered outstanding video production work that perfectly captured our vision and made a lasting impression."
     }
   ];
 
@@ -190,19 +190,19 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
     const videoSchema = {
       "@context": "https://schema.org",
       "@type": "VideoObject",
-      "name": "Parasya Motion - Elevating Your Identity",
-      "description": "Discover Parasya's vision and expertise in incorporation, legal support, digital marketing, and cutting-edge app & web development services. This video showcases our brand and mission.",
+      "name": "Palqar Motion - Elevating Your Identity",
+      "description": "Discover Palqar's vision and expertise in incorporation, legal support, digital marketing, and cutting-edge app & web development services. This video showcases our brand and mission.",
       "uploadDate": "2025-05-01T08:00:00+05:30",
       "duration": "PT0M51S",
-      "thumbnailUrl": "https://parasya.in/logo-white.webp",
-      "contentUrl": "https://parasya.in/parasya-motion.mp4",
-      "embedUrl": "https://parasya.in/home",
+      "thumbnailUrl": "https://palqar.com/logo-white.webp",
+      "contentUrl": "https://palqar.com/parasya-motion.mp4",
+      "embedUrl": "https://palqar.com/home",
       "publisher": {
         "@type": "Organization",
-        "name": "Parasya",
+        "name": "Palqar",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://parasya.in/logo-white.webp"
+          "url": "https://palqar.com/logo-white.webp"
         }
       }
     };
