@@ -26,4 +26,7 @@ xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
   <url>
     <loc>https://palqar.com/portfolio</loc>
   </url>
+  <url>
+    <loc>https://palqar.com/careers</loc>
+  </url>
 </urlset>
