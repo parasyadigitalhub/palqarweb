@@ -17,11 +17,11 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
   isLoading = true;
 
   carouselImages: string[] = [
-    '/home/carousel/futurestars.webp',
-    '/home/carousel/keyworld.webp',
-    '/home/carousel/luvwish.webp',
-    '/home/carousel/nextgen.webp',
-    '/home/carousel/p4.webp',
+    '/home/carousel/1.webp',
+    '/home/carousel/2.webp',
+    '/home/carousel/3.webp',
+    '/home/carousel/4.webp',
+    '/home/carousel/5.webp',
     '/home/carousel/sportwindo.webp',
   ]
 
