@@ -12,7 +12,8 @@
                     <div class="row g-3 mt-3">
                         <div class="col-md-3" *ngFor="let branding of brandingsList">
                             <div class="card h-100 text-white bg-dark d-flex flex-column">
-                                <img [src]="branding.image" class="card-img-top" style="background-color: white;" [alt]="branding.name">
+                                <img [src]="branding.image" class="card-img-top" style="background-color: white;"
+                                    [alt]="branding.name">
                                 <div class="card-body flex-grow-1">
                                     <h5 class="card-title">{{ branding.name }}</h5>
                                     <p class="card-text">{{ branding.description }}</p>
@@ -131,7 +132,8 @@
         <!-- Top Overview Row -->
         <div class="row mb-4">
             <div class="col-md-6">
-                <img [src]="selectedBranding?.image" alt="Logo" style="background-color: white;" class="img-fluid rounded shadow-sm w-100">
+                <img [src]="selectedBranding?.image" alt="Logo" style="background-color: white;"
+                    class="img-fluid rounded shadow-sm w-100">
             </div>
             <div class="col-md-6">
                 <h6 class="text-danger fw-bold">Overview</h6>
@@ -140,6 +142,8 @@
                 <p>{{ selectedBranding?.problemStatement }}</p>
                 <h6 class="text-danger fw-bold">Location</h6>
                 <p>{{ selectedBranding?.location }}</p>
+                <h6 *ngIf="selectedBranding.founder" class="text-danger fw-bold">Founder</h6>
+                <p>{{ selectedBranding?.founder }}</p>
             </div>
         </div>
 
@@ -205,6 +209,8 @@
                 <p>{{ selectedApp?.appStatement }}</p>
                 <h6 class="text-danger fw-bold">Location</h6>
                 <p>{{ selectedApp?.location }}</p>
+                <h6 *ngIf="selectedApp.founder" class="text-danger fw-bold">Founder</h6>
+                <p>{{ selectedApp?.founder }}</p>
             </div>
         </div>
 

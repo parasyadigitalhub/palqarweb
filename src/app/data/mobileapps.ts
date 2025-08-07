@@ -46,7 +46,8 @@ export const mobileApps = [
         appOverview: 'A professional cleaning service app with real-time availability, easy booking, and staff management features.',
         appUrl: '',
         appStatement: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-        location: 'California, US',
+        location: 'California, USA',
+        founder: 'Maria Joseph',
         testimonials: [
             { author: 'John Doe', text: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit .' },
         ]

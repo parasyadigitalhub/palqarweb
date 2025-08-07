@@ -22,7 +22,6 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
     '/home/carousel/3.webp',
     '/home/carousel/4.webp',
     '/home/carousel/5.webp',
-    '/home/carousel/sportwindo.webp',
   ]
 
   secondCarouselImagesTop: string[] = [

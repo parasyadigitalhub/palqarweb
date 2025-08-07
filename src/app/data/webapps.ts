@@ -20,7 +20,8 @@ export const webApps = [
         appOverview: 'Avior Biotech, a Canada-based company, provides science-based, natural solutions to promote poultry health and reduce mortality rates.',
         appStatement: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
         appUrl: 'Aviorbiotech.com',
-        location: 'India',
+        location: 'UK/CANADA',
+        founder: 'Vivek Krishna',
         testimonials: [
             { author: 'John Doe', text: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit .' },
         ]
@@ -33,7 +34,8 @@ export const webApps = [
         appOverview: 'Future Stars Sports Academy operates in India and the UAE, empowering over 200 young athletes and fostering a community of over 12,000 members.',
         appStatement: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
         appUrl: 'Futurestarsports.academy',
-        location: 'India',
+        location: 'UAE/INDIA',
+        founder: 'Fayis KTK',
         testimonials: [
             { author: 'John Doe', text: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit .' },
         ]
@@ -47,6 +49,7 @@ export const webApps = [
         appStatement: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
         appUrl: 'Nextpatheducare.in',
         location: 'India',
+        founder: 'Akash Sasidaran',
         testimonials: [
             { author: 'John Doe', text: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit .' },
         ]
@@ -72,7 +75,7 @@ export const webApps = [
         appOverview: 'MMK Trading LLC is a leading trade company in Qatar, specializing in global export and import, offering trusted services to clients worldwide.',
         appStatement: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
         appUrl: 'https://www.mmktrading.co/',
-        location: 'India',
+        location: 'Doha, Qatar',
         testimonials: [
             { author: 'John Doe', text: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit .' },
         ]
@@ -111,7 +114,8 @@ export const webApps = [
         appOverview: 'A professional cleaning service app with real-time availability, easy booking, and staff management features.',
         appUrl: 'cleanmaria.com/',
         appStatement: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-        location: 'California, US',
+        location: 'California, USA',
+        founder: 'Maria Joseph',
         testimonials: [
             { author: 'John Doe', text: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit .' },
         ]
