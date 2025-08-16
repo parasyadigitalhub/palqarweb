@@ -18,7 +18,7 @@ export class AboutComponent implements OnInit, AfterViewInit {
     {
       name: "Rishan",
       role: "Founder",
-      image: "/individual/Rishan2.webp",
+      image: "/individual/rishan1.webp",
       linkedin: "https://www.linkedin.com/in/rishanparasya/",
     },
     {
