@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { AfterViewInit, Component, ElementRef, HostListener, OnInit, QueryList, ViewChildren } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, HostListener, OnDestroy, OnInit, QueryList, ViewChild, ViewChildren } from '@angular/core';
 import { LazyLoadDirective } from '../../common/directives/lazy-load.directive';
 
 @Component({
@@ -8,11 +8,20 @@ import { LazyLoadDirective } from '../../common/directives/lazy-load.directive';
   templateUrl: './about.component.html',
   styleUrl: './about.component.css'
 })
-export class AboutComponent implements OnInit, AfterViewInit {
+export class AboutComponent implements OnInit, AfterViewInit, OnDestroy {
   selectedYear: string = '2023';
   showFull2023: boolean = false;
   showFull2024: boolean = false;
   isMobile: boolean = false;
+
+  @ViewChild('carouselTrack') carouselTrack!: ElementRef;
+
+  private animationFrameId: number = 0;
+  private scrollX: number = 0;
+  private speed: number = 0.5;
+  private isDragging = false;
+  private startX = 0;
+  private prevScrollX = 0;
 
   teamMembers: any[] = [
     {
@@ -62,6 +71,12 @@ export class AboutComponent implements OnInit, AfterViewInit {
       role: "Strategic Content Writer",
       image: "/individual/gouri.webp",
       linkedin: "https://www.linkedin.com/in/gouri-c-r-4674802b2/ ",
+    },
+    {
+      name: "Devanand ",
+      role: "Backend Developer",
+      image: "/individual/devan.webp",
+      linkedin: "https://www.linkedin.com/in/devanandj",
     }
   ];
 
@@ -101,5 +116,65 @@ export class AboutComponent implements OnInit, AfterViewInit {
     this.scrollSections.forEach((section) => {
       observer.observe(section.nativeElement);
     });
+
+    this.startAutoScroll();
   }
+
+  ngOnDestroy() {
+    cancelAnimationFrame(this.animationFrameId);
+  }
+
+  private startAutoScroll() {
+    const track = this.carouselTrack.nativeElement;
+
+    const step = () => {
+      if (!this.isDragging) {
+        this.scrollX -= this.speed;
+
+        const width = track.scrollWidth / 2;
+        if (Math.abs(this.scrollX) >= width) {
+          this.scrollX = 0;
+        }
+
+        track.style.transform = `translateX(${this.scrollX}px)`;
+      }
+
+      this.animationFrameId = requestAnimationFrame(step);
+    };
+
+    this.animationFrameId = requestAnimationFrame(step);
+  }
+
+  onTouchStart(event: TouchEvent) {
+    this.isDragging = true;
+    this.startX = event.touches[0].clientX - this.scrollX;
+  }
+
+  onTouchMove(event: TouchEvent) {
+    if (!this.isDragging) return;
+    this.scrollX = event.touches[0].clientX - this.startX;
+    this.carouselTrack.nativeElement.style.transform = `translateX(${this.scrollX}px)`;
+  }
+
+  onTouchEnd() {
+    this.isDragging = false;
+  }
+
+  onMouseDown(event: MouseEvent) {
+    this.isDragging = true;
+    this.startX = event.clientX - this.scrollX;
+    this.carouselTrack.nativeElement.style.cursor = 'grabbing';
+  }
+
+  onMouseMove(event: MouseEvent) {
+    if (!this.isDragging) return;
+    this.scrollX = event.clientX - this.startX;
+    this.carouselTrack.nativeElement.style.transform = `translateX(${this.scrollX}px)`;
+  }
+
+  onMouseUp() {
+    this.isDragging = false;
+    this.carouselTrack.nativeElement.style.cursor = 'grab';
+  }
+
 }

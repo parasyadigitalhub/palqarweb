@@ -188,7 +188,7 @@
             <p>Discover the driving force behind Palqar. Our core team, including visionary founders, is committed to
                 empowering you with expertise in Marketing and Technology world.</p>
         </div>
-        @if(!isMobile){
+        <!-- @if(!isMobile){
         <div class="team-images">
             <div class="team-card" *ngFor="let card of teamMembers">
                 <img [src]="card.image" loading="lazy" [alt]="card.name" />
@@ -233,7 +233,43 @@
                 <span class="visually-hidden">Next</span>
             </button>
         </div>
-        }
+        } -->
+
+        <div class="image-flow" appLazyLoad>
+            <div class="carousel-row top">
+                <div class="carousel-track" #carouselTrack (touchstart)="onTouchStart($event)"
+                    (touchmove)="onTouchMove($event)" (touchend)="onTouchEnd()" (mousedown)="onMouseDown($event)"
+                    (mousemove)="onMouseMove($event)" (mouseup)="onMouseUp()" (mouseleave)="onMouseUp()">
+
+                    <div class="team-image" *ngFor="let card of teamMembers">
+                        <img [src]="card.image" [alt]="card.name" loading="lazy" />
+                        <div class="team-overlay">
+                            <div class="team-info">
+                                <h5>{{ card.name }}</h5>
+                                <p>{{ card.role }}</p>
+                            </div>
+                            <a [href]="card.linkedin" target="_blank" aria-label="LinkedIn Profile">
+                                <i class="bi bi-linkedin"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- duplicate for infinite scroll -->
+                    <div class="team-image" *ngFor="let card of teamMembers">
+                        <img [src]="card.image" [alt]="card.name" loading="lazy" />
+                        <div class="team-overlay">
+                            <div class="team-info">
+                                <h5>{{ card.name }}</h5>
+                                <p>{{ card.role }}</p>
+                            </div>
+                            <a [href]="card.linkedin" target="_blank" aria-label="LinkedIn Profile">
+                                <i class="bi bi-linkedin"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
     </div>
 </div>
